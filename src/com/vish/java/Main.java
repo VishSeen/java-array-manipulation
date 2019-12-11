@@ -12,9 +12,7 @@ import java.util.Scanner;
 
 public class Main {
     private static Scanner scanner;
-    private static int numOfInputs;
     private static String[] arrayWords;
-    private static int index;
 
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
@@ -27,7 +25,7 @@ public class Main {
         System.out.println("");
 
         System.out.print("Enter number of inputs you want : ");
-        numOfInputs = scanner.nextInt();
+        int numOfInputs = scanner.nextInt();
 
         System.out.println(" ");
 
@@ -38,23 +36,30 @@ public class Main {
 
 
         System.out.print("Displaying added items : ");
+
         for (String names : getInputs()){
             System.out.print(names + " ");
         }
+
         System.out.println(" ");
         System.out.println(" ");
 
         System.out.print("Enter number to get specific element :");
-        index = scanner.nextInt();
+        int index = scanner.nextInt();
 
         System.out.print("Item at " + index + " is : " + getNthInput(index));
-
+        System.out.println(" ");
     }
 
 
 
 
     /* Manipulate the input */
+
+    /**
+     * Adds words to the array depending on the numOfInputs available
+     * @param numOfInputs desired by the user / need to fetch the words
+     */
     public static void addInputs(int numOfInputs){
         String word;
         arrayWords = new String[numOfInputs];
@@ -67,6 +72,10 @@ public class Main {
         }
     }
 
+    /**
+     * Retrieve all words from array.
+     * @return Words from array if array != 0 (empty)
+     */
     public static String[] getInputs(){
         if (arrayWords.length != 0){
             return arrayWords;
@@ -75,6 +84,12 @@ public class Main {
         return null;
     }
 
+
+    /**
+     * Gets the element at the Nth value.
+     * @param index specifies position to retrieve element
+     * @return element from array if array >= numOfInputs
+     */
     public static String getNthInput(int index){
         if (arrayWords.length >= index){
             return arrayWords[index];
@@ -82,5 +97,4 @@ public class Main {
 
         return "No such index..";
     }
-
 }

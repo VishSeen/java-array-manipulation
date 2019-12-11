@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JoiningWords.iml" filepath="$PROJECT_DIR$/JoiningWords.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArrayManipulation.iml" filepath="$PROJECT_DIR$/ArrayManipulation.iml" />
     </modules>
   </component>
 </project>
